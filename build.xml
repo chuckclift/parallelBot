@@ -1,0 +1,9 @@
+<project default="package">
+    <target name="compile">
+        <mkdir dir="build/"/>
+        <javac classpath="robocode.jar" srcdir="src/"  destdir="build/"/>
+    </target>
+    <target name="package" depends="compile">
+        <jar destfile="ParallelBot.jar" basedir="build/"/> 
+    </target>
+</project>
